@@ -336,7 +336,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+# build/
+# !build/*.pdf
 develop-eggs/
 dist/
 downloads/
@@ -528,3 +529,6 @@ Cargo.lock
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,latex,python,jupyternotebooks,rust
+
+### Tectonic output pdf ###
+!arbitrage-opportunities/build/arbitrage-opportunities/arbitrage-opportunities.pdf
