@@ -1,5 +1,66 @@
-\documentclass{article}
+\documentclass[14pt, a4paper]{extreport}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{ragged2e}             % Justifying
+\usepackage{indentfirst}
+\usepackage{setspace}             % 1.5 spacing
+\usepackage{newtxtext,newtxmath}  % Times new roman
+\usepackage{titlesec}
+\usepackage[nottoc,notlot,notlof]{tocbibind} % add refs to table of contents
+\usepackage[citestyle=authoryear, bibstyle=gost-numeric, backend=biber]{biblatex}
+\usepackage{fontspec}
+
+\NewCommandCopy{\oldcite}{\cite}
+\renewcommand{\cite}[1]{(\oldcite{#1})}
+
+\onehalfspacing % 1.5 spacing
+\setlength{\parindent}{1cm} % 1cm indent
+\justifying
+
+\addbibresource{bibliography.bib}
+
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+\newenvironment{sizepar}[2]
+ {\par\fontsize{#1}{#2}\selectfont}
+ {\par}
+
+\geometry{ % Margins
+    a4paper,
+    left=25mm,
+    top=15mm,
+    bottom=15mm,
+    right=15mm
+}
+
+% Images path
+\graphicspath{ {./graphics/} }
+
+% Chapter font size
+\titleformat{\chapter}[display]{\bfseries}{}{0pt}{\size{18}}
+
+\newcommand{\myfigure}[3]{
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.5\textwidth]{#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
 \title{Search For Arbitrage Opportunities}
 \author{Nikolay Chechulin}
-\begin{document}
+
+
+\thispagestyle{empty}  % do not number the title page
 \maketitle
+\begin{abstract}
+    Some abstract goes here
+\end{abstract}
+
+\tableofcontents
+\pagebreak
