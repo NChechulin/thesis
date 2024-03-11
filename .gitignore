@@ -532,3 +532,5 @@ Cargo.lock
 
 ### Tectonic output pdf ###
 !arbitrage-opportunities/build/arbitrage-opportunities/arbitrage-opportunities.pdf
+### Tectonic output bibliography ###
+arbitrage-opportunities/build/arbitrage-opportunities/*.bib
